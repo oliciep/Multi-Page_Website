@@ -1,0 +1,19 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add your styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Define styles for header, main content, and footer */
+
+/* Define styles for navigation links */
+
+/* Define styles for project cards, if applicable */
+
+/* Media queries for responsive design */

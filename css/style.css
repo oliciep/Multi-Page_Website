@@ -11,7 +11,7 @@ body {
 
 .toolbar {
     background-color: #222;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -21,8 +21,19 @@ body {
     margin: 0 20px;
 }
 
+.toolbar a:hover {
+    color: #000000;
+}
+
 h1 {
     font-size: 36px;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 10px;
+    color: gray
 }

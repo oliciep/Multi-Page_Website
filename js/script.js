@@ -1,6 +1,8 @@
 const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const toolbarLinks = document.querySelectorAll('.toolbar a');
 
 navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+    toolbarLinks.forEach(link => {
+        link.classList.toggle('show');
+    });
 });

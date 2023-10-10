@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background: linear-gradient(-45deg, #616060, #9c9b9b, #89a4ad, #121212);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color: #fff;
     font-family: Arial, sans-serif;
     display: flex;
@@ -9,8 +11,31 @@ body {
     height: 100vh;
 }
 
+.gradient-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: gradient 15s ease infinite;
+    z-index: -1; /* Place it behind other content */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .toolbar {
     background-color: #222;
+    opacity: 0.7;
     padding: 15px 0;
     display: flex;
     justify-content: space-between; /* Space elements evenly horizontally */
@@ -21,7 +46,7 @@ body {
     color: #fff;
     text-decoration: none;
     margin-right: 20px;
-    padding: 10px 40px; 
+    padding: 10px 30px; 
     background-color: #222; 
     transition: background-color 1s, color 1s; 
     
@@ -48,51 +73,123 @@ h1 {
     margin-top: 20px;
 }
 
+.link-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed to control spacing */
+    margin-right: 10px
+}
+
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
+
 /* Style for project cards */
 .project-card {
-    display: flex;
-    border: 1px solid #535151;
+    width: 400;
+    height: 200px;
+    border: 1px solid #747373;
     border-radius: 5px;
-    background-color: #474646;
+    padding: 10px;
+    background-color: #3d3939;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide the overflowing content (image slide) */
+    position: relative; /* To make text absolute relative to this card */  
 }
 
-.project-card .project-image {
-    flex: 1;
+.project-card .project-header {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.project-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.project-card .project-details {
-    flex: 2;
-    padding: 20px;
-}
-
-.project-card h2 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.project-card p {
+.project-card .project-info .title {
+    margin: 0;
+    padding: 0;
     margin-bottom: 10px;
 }
 
-.project-card a {
-    text-decoration: none;
-    color: #007BFF;
-    display: block;
-    text-align: right;
+.project-card .project-info .tags {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute; /* Position the tags at the bottom right */
+    bottom: 10px; /* Adjust as needed for spacing */
+    right: 0px; /* Adjust as needed for spacing */
 }
+
+.project-card .project-info .tag {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.project-card img.project-image {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition for the image slide */
+}
+
+.project-card .tags {
+    display: flex;
+    justify-content: flex-end; /* Align tags to the right */
+    padding-right: 20px; /* Add right padding to space tags from the edge */
+}
+
+.project-card .tag {
+    background-color: #007BFF; /* Tag background color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded tag shape */
+    margin-left: 5px; /* Add margin between tags */
+}
+
+.project-card h2 {
+    margin: 0; /* Remove margin for the title */
+}
+
+.project-card .project-details {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Initially, position the text outside the card */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Background color for the text area */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s, left 0.3s ease-in-out; /* Add smooth transitions for opacity and left position */
+}
+
+.project-card:hover img.project-image {
+    transform: translateX(-100%); /* Slide the image to the left on hover */
+}
+
+.project-card:hover .project-details {
+    opacity: 1; /* Make the description and link fully visible when the card is hovered */
+    left: 0; /* Slide the text back into the card on hover */
+}
+
+.project-card .project-details a {
+    display: none; /* Initially hide the link */
+}   
+
+.project-card:hover .project-details a {
+    display: block; /* Display the link when the card is hovered */
+    margin-top: 10px; /* Add spacing between description and link */
+    text-decoration: none;
+    color: #fff;
+}
+
+.project-card .project-details a:not(:last-child) {
+    margin-right: 20px; /* Add margin to increase spacing between links */
+}
+

@@ -11,22 +11,88 @@ body {
 
 .toolbar {
     background-color: #222;
-    padding: 20px 0;
-    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between; /* Space elements evenly horizontally */
+    align-items: center; /* Center elements vertically */
 }
 
 .toolbar a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin-right: 20px;
+    padding: 10px 40px; 
+    background-color: #222; 
+    transition: background-color 1s, color 1s; 
+    
 }
 
 .toolbar a:hover {
-    color: #000000;
+    background-color: #333;
+    color: #222;
+    
+}
+
+.toolbar img {
+    max-width: 30px; /* Adjust the image width as needed */
+    margin: 0 10px; /* Add margin for spacing between images */
+}
+
+.spacer {
+    flex: 1; /* Take up available space and push "Oliver Cieplinski" to the far left */
 }
 
 h1 {
     font-size: 36px;
     text-align: left;
     margin-top: 20px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+/* Style for project cards */
+.project-card {
+    display: flex;
+    border: 1px solid #535151;
+    border-radius: 5px;
+    background-color: #474646;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.project-card .project-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.project-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007BFF;
+    display: block;
+    text-align: right;
 }

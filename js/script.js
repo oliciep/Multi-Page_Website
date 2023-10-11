@@ -1,8 +1,20 @@
-const navToggle = document.querySelector('.nav-toggle');
-const toolbarLinks = document.querySelectorAll('.toolbar a');
+let slideIndex = 0;
 
-navToggle.addEventListener('click', () => {
-    toolbarLinks.forEach(link => {
-        link.classList.toggle('show');
-    });
-});
+function showSlides() {
+    let i;
+    const slides = document.querySelectorAll('.project-card');
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 10000); // Change slide every 10 seconds (10000 milliseconds)
+}
+
+showSlides();

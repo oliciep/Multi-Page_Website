@@ -85,12 +85,12 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     opacity: 0.85;
+    margin-bottom: 60px;
 }
 
 
 /* Style for project cards */
 .project-card {
-    width: 400;
     height: 200px;
     border: 1px solid #747373;
     border-radius: 5px;
@@ -194,4 +194,57 @@ h1 {
 .project-card .project-details a:not(:last-child) {
     margin-right: 20px; /* Add margin to increase spacing between links */
 }
+
+.slideshow-container {
+    position: relative;
+}
+
+.fade {
+    width: 500px;
+    animation-name: fade;
+    animation-duration: 10s; /* Time for each card to stay */
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    5%, 95% { opacity: 1; }
+}
+
+.right-align {
+    margin-left: auto;
+    margin-right: 150px;
+}
+
+.fade-in-text {
+    opacity: 0; /* Initially, set the opacity to 0 to hide the text */
+    animation: fadeIn 2s ease forwards; /* Apply the fadeIn animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; /* At the end of the animation, set the opacity to 1 to make the text fully visible */
+    }
+}
+
+footer {
+    background-color: #222; /* Background color for the footer */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding as needed */
+    margin-top: auto; /* Push the footer to the bottom */
+    opacity: 0.85;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+
+
 

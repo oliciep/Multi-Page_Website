@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     animation: gradient 15s ease infinite;
-    z-index: -1; /* Place it behind other content */
+    z-index: -1; 
 }
 
 @keyframes gradient {
@@ -38,8 +38,8 @@ body {
     opacity: 0.7;
     padding: 15px 0;
     display: flex;
-    justify-content: space-between; /* Space elements evenly horizontally */
-    align-items: center; /* Center elements vertically */
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .toolbar a {
@@ -59,12 +59,12 @@ body {
 }
 
 .toolbar img {
-    max-width: 30px; /* Adjust the image width as needed */
-    margin: 0 10px; /* Add margin for spacing between images */
+    max-width: 30px; 
+    margin: 0 10px; 
 }
 
 .spacer {
-    flex: 1; /* Take up available space and push "Oliver Cieplinski" to the far left */
+    flex: 1; 
 }
 
 h1 {
@@ -86,6 +86,7 @@ h1 {
     gap: 20px;
     opacity: 0.85;
     margin-bottom: 60px;
+    padding: 20px;
 }
 
 
@@ -99,6 +100,8 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden; /* Hide the overflowing content (image slide) */
     position: relative; /* To make text absolute relative to this card */  
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 1;
 }
 
 .project-card .project-header {
@@ -170,6 +173,10 @@ h1 {
     color:#ffffff;
 }
 
+.project-card:not(.slideshow-container .project-card):hover {
+    transform: scale(1.05); /* Enlarge the card by 5% on hover */
+}
+
 .project-card:hover img.project-image {
     transform: translateX(-100%); /* Slide the image to the left on hover */
 }
@@ -194,6 +201,10 @@ h1 {
     margin-right: 20px; /* Add margin to increase spacing between links */
 }
 
+.project-card:hover {
+    opacity: 0.7;
+}
+
 @keyframes sparkle {
     0% {
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
@@ -211,11 +222,11 @@ h1 {
 
 /* Apply the animation to your project container (slideshow) */
 .slideshow-container {
-    width: 550px;
+    width: 554px;
     overflow: hidden; /* Hide any overflow (just in case) */
     animation: sparkle 5s ease infinite;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 90px;
     padding-right: 20px;
 }
 

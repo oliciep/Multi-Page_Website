@@ -71,6 +71,7 @@ h1 {
     font-size: 36px;
     text-align: left;
     margin-top: 20px;
+    color:#222 
 }
 
 .link-container {
@@ -83,6 +84,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    opacity: 0.85;
 }
 
 

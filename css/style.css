@@ -92,7 +92,7 @@ h1 {
 /* Style for project cards */
 .project-card {
     height: 200px;
-    border: 1px solid #747373;
+    border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px;
     background-color: #3d3939;
@@ -106,9 +106,6 @@ h1 {
     justify-content: space-between;
 }
 
-.project-card .project-info {
-    margin-left: 40px
-}
 .project-card .project-info .tags {
     display: flex;
     justify-content: flex-end;
@@ -148,7 +145,8 @@ h1 {
 }
 
 .project-card h2 {
-    margin: 0; /* Remove margin for the title */
+    margin: 0; /* Remove margin for the title */   
+    color: black;
 }
 
 .project-card .project-details {
@@ -166,6 +164,10 @@ h1 {
     text-align: center;
     opacity: 0; /* Initially hide the text */
     transition: opacity 0.3s, left 0.3s ease-in-out; /* Add smooth transitions for opacity and left position */
+}
+
+.project-card .project-details h2{
+    color:#ffffff;
 }
 
 .project-card:hover img.project-image {
@@ -192,12 +194,37 @@ h1 {
     margin-right: 20px; /* Add margin to increase spacing between links */
 }
 
+@keyframes sparkle {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to your project container (slideshow) */
 .slideshow-container {
-    position: relative;
+    width: 550px;
+    overflow: hidden; /* Hide any overflow (just in case) */
+    animation: sparkle 5s ease infinite;
+    margin-left: auto;
+    margin-right: 100px;
+    padding-right: 20px;
+}
+
+.slideshow-container h2{
+    margin-right: 20px;
 }
 
 .fade {
-    width: 500px;
+    width: 550px;
     animation-name: fade;
     animation-duration: 10s; /* Time for each card to stay */
     animation-timing-function: ease;

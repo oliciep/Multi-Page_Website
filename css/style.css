@@ -5,7 +5,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: "Courier New", monospace;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -106,12 +106,9 @@ h1 {
     justify-content: space-between;
 }
 
-.project-card .project-info .title {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
+.project-card .project-info {
+    margin-left: 40px
 }
-
 .project-card .project-info .tags {
     display: flex;
     justify-content: flex-end;

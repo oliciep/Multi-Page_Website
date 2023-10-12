@@ -11,6 +11,52 @@ body {
     height: 100vh;
 }
 
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent; /* Add a transparent border */
+  padding-right: 5px; /* Adjust padding to control the blinking speed */
+  animation: typing 10s steps(120, end);
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.typewriter::after {
+  content: "_"; /* Initial underscore */
+  display: inline-block;
+  width: 0;
+  animation: infinite, blink-underscore 1s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-underscore {
+  0%, 100% {
+    content: "_";
+  }
+  50% {
+    content: "";
+  }
+}
+
+.subtext {
+    color:gray;
+    margin-left: 10px;
+    margin-top: -35px;
+    font-size: 30px;
+    opacity: 0;  
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 3s;
+}
+
 .gradient-background {
     width: 100%;
     height: 100%;
@@ -161,7 +207,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     opacity: 0.85;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding: 20px;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
@@ -214,7 +260,7 @@ h1 {
 .project-card .tags {
     display: flex;
     justify-content: flex-end; /* Align tags to the right */
-    padding-right: 20px; /* Add right padding to space tags from the edge */
+    padding-right: 15px; /* Add right padding to space tags from the edge */
 }
 
 .project-card .tag {

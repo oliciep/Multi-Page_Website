@@ -36,7 +36,7 @@ body {
 .toolbar {
     background-color: #222;
     opacity: 0.7;
-    padding: 15px 0;
+    padding: 0px 0;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -46,7 +46,7 @@ body {
     color: #fff;
     text-decoration: none;
     margin-right: 20px;
-    padding: 10px 30px; 
+    padding: 20px 30px; 
     background-color: #222; 
     transition: background-color 1s, color 1s; 
     
@@ -78,6 +78,44 @@ h1 {
     display: flex;
     justify-content: space-between; /* Adjust as needed to control spacing */
     margin-right: 10px
+}
+
+.infobar {
+    background-color: #333;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.option:hover {
+    background-color: #777;
+}
+
+.textbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    overflow: hidden;
+}
+
+.textbox {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .project-container {

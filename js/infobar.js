@@ -5,14 +5,51 @@ let activeOption = null;
 const bioHTML = `
     <div>
         <h2>Biography</h2>
-        <p>I'm a recently graduated software developer from Guildford who enjoys creating projects in my spare time.<br>My strongest
-        languages are: <p>
+        <p>Hi, I'm Oli and I'm a recently graduated software developer from Guildford who enjoys creating projects in my spare time. I have
+        experience in writing full stack projects, and I am comfortable with both front and back end development. I am currently most interested
+        in <b>artificial intelligence</b> and <b>cyber security</b>, the former of which I carried out my dissertation on. My strongest
+        programming languages are: <p>
         <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C#</li>
-            <li>HTML</li>
+            <li>
+                <img src="images/langs/python.png" alt="python">
+                <a>Python</a>
+            </li>
+            <li>
+                <img src="images/langs/java.png" alt="java">
+                <a>Java</a>
+            </li>
+            <li>
+                <img src="images/langs/csharp.png" alt="csharp">
+                <a>C#</a>
+            </li>
+            <li>
+                <img src="images/langs/html.png" alt="html">
+                <a>HTML/CSS</a>
+            </li>
         </ul>
+        <style>
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            li img {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        </style>
 `;
 
 const educationHTML = `

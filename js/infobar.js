@@ -6,37 +6,60 @@ const bioHTML = `
     <div>
         <h2>Biography</h2>
         <p>Hi, I'm Oli and I'm a recently graduated software developer from Guildford who enjoys creating projects in my spare time. I have
-        experience in writing full stack projects, and I am comfortable with both front and back end development. I am currently most interested
-        in <b>artificial intelligence</b> and <b>cyber security</b>, the former of which I carried out my dissertation on. My strongest
-        programming languages are: <p>
+        experience in writing <b>full stack</b> projects, in an <b>individual</b> and a <b>group</b> setting, and I am comfortable with both <b>front</b> and <b>back end</b>
+        development.I have encountered various fields of computer science within my research, and I am currently very interested in
+        <b>artificial intelligence</b> and <b>cyber security</b>, the former of which I carried out my final year dissertation on.<br><br> 
+        <h3><i>Skills and Programming languages:</i><h3>
         <ul>
             <li>
                 <img src="images/langs/python.png" alt="python">
                 <a>Python</a>
             </li>
             <li>
+                <img src="images/langs/html.png" alt="html">
+                <a>HTML</a>
+            </li>
+            <li>
+                <img src="images/langs/sql.png" alt="sql">
+                <a>MySQL</a>
+            </li>
+            <li>
                 <img src="images/langs/java.png" alt="java">
                 <a>Java</a>
+            </li>
+            <li>
+                <img src="images/langs/css.png" alt="css">
+                <a>CSS</a>
+            </li>
+            <li>
+                <img src="images/langs/git.png" alt="git">
+                <a>Git</a>
             </li>
             <li>
                 <img src="images/langs/csharp.png" alt="csharp">
                 <a>C#</a>
             </li>
             <li>
-                <img src="images/langs/html.png" alt="html">
-                <a>HTML/CSS</a>
+                <img src="images/langs/js.png" alt="javascript">
+                <a>JavaScript</a>
+            </li>
+            <li>
+                <img src="images/langs/aws.png" alt="aws">
+                <a>AWS</a>
             </li>
         </ul>
         <style>
             ul {
                 list-style-type: none;
                 padding: 0;
+                column-count: 3;
+                column-gap: 10px;
             }
 
             li {
                 display: flex;
                 align-items: center;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
             li img {
@@ -80,17 +103,22 @@ const workHTML = `
     <div>
         <h2>Work History</h2>
         <h3 style="color:white"><b style="color:black">Delivery Courier- <i>Deliveroo</i></b><i> (09/2021-07/2023)</i></h3>
-        <p> Online food delivery platform connecting consumers and local restaurants to enable ordering and delivery. </p>
+        <p><i><b>Online food delivery platform connecting consumers and local restaurants to enable ordering and delivery.</b></i><br><br>
+        Working as a delivery courier in evenings during university. During my time as a courier, I learned to adapt to difficult
+        situations, as well as developing connections with regular clients. Working as a courier helped me to organise my time better,
+        allowing me to schedule my shifts in accordance with my university timetable. </p>
         <h3 style="color:white"><b style="color:black">Services Assistant- <i>Sainsburys</i></b><i> (01/2018-06/2018)</i></h3>
-        <p> Multi-channel retailer that offers groceries, general merchandise, and clothing products. </p>
-
-        <p> 
+        <p><i><b>Multi-channel retailer that offers groceries, general merchandise, and clothing products.</b></i><br><br>
+        During my time at Sainsbury's, I acquired a lot of key skills. I helped to prepare and distribute food products, take inventory
+        of current stock, provide over the counter service to customers and restock products. This helped develop teamwork and 
+        communication skills, to efficiently and quickly complete pertinent tasks as soon as I could.
+        </p>
     </div>
 `;
 
 const contactHTML = `
     <div>
-        <p>Useful Links:</p>   
+        <h2>Contact Me</h2>   
         <ul>
             <li>
                 <img src="images/contacts/linkedin.png" alt="linkedIn">
@@ -132,12 +160,12 @@ const contactHTML = `
 
             a {
                 text-decoration: none;
-                color: #fffefe;
+                color: black;
                 transition: color 0.5s;
             }
             
             a:hover {
-                color: #222
+                color: white;
             }
         </style>
     </div>
